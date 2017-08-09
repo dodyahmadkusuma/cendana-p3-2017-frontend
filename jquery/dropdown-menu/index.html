@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+		margin:0;
+		padding:0;*/
+		}
+		.example {
+		border-radius:3px;
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+		}
+
+		#nav,#nav ul {
+
+		list-style:none;
+		margin:0;
+		padding:0;
+		border-radius: 20px;
+		}
+		#nav {
+		width: 75%;
+		margin-left: 150px;
+		margin-right: 150px;
+		background-color:#2c3e50;
+		height:47px;
+		padding-left:5px;
+		padding-top:5px;
+		position:relative;
+		z-index:2;
+		}
+		#nav ul {
+
+		left:-9999px;
+		position:absolute;
+		top:37px;
+		width:auto;
+		}
+		#nav ul ul {
+		left:-9999px;
+		position:absolute;
+		top:0;
+		width:auto;
+		}
+
+		#nav li li a:hover{
+		background: #2ecc71;
+
+		}
+		#nav li {
+		float:left;
+		margin-right:5px;
+		position:relative;
+		}
+		#nav li a {
+		width: 120px;
+		margin-left: 16px;
+		background:#3498db;
+		color:#fff;
+		display:block;
+		float:left;
+		font-size:16px;
+		padding:8px 10px;
+		text-decoration:none;
+		}
+		#nav > li > a {
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-o-border-radius:6px;
+		border-radius:6px;
+
+		overflow:hidden;
+		}
+		#nav li a.sub-menu { 
+		background:#3498db ;
+		content: ">>>";
+		padding-right:15px;
+		}
+		#nav ul li {
+		margin:0;
+		}
+		#nav ul li a {
+		width:120px;
+		}
+		#nav ul li a.sub-menu {
+		padding-right:10px;
+		}
+
+		#nav li:hover > a {
+		background-color:#1abc9c;
+		color:#fff;
+		}
+
+		#nav li a:focus {
+		outline-width:0;
+		}
+
+		#nav li a:active + ul.dd,#nav li a:focus + ul.dd,#nav li ul.dd:hover {
+		left:0;
+		}
+		#nav ul.dd li a:active + ul,#nav ul.dd li a:focus + ul,#nav ul.dd li ul:hover {
+		left:140px;
+		}
+
+
+
+	</style>
+
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<center><div class="example">
+    <ul id="nav">
+             <li><a href="#">Teknologi</a>
+                <ul class="dd">
+                <li><a href="#">Apple</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Hardware</a></li>
+            <li><a href="#">Industry News</a></li>
+            <li><a href="#">Linux/Unix</a></li>
+                <li><a href="#">Microsoft</a></li>
+                </ul>
+    
+             <li><a href="#">Produk</a>
+                <ul class="dd">
+                <li><a href="#" class="sub-1">Web Master</a></li>
+            <li><a href="#" class="sub-1">Graphic Design</a></li>
+            <li><a href="#" class="sub-1">Web Programming</a></li>
+            <li><a href="#" class="sub-1">Digital Marketing</a></li>
+                <li><a href="#" class="sub-1">Flash Animasi</a></li>
+                </ul>
+
+          <li><a href="#">Artikel</a>
+            <ul class="dd"> <!--dd ini yg kebawah-->
+                <li><a href="#">HTML / CSS</a></li>
+                <li><a class="sub-menu" href="#">JS / jQuery </a>
+                    <ul>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">MySQL</a></li>
+                <li><a href="#">XSLT</a></li>
+                <li><a href="#">Ajax</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Latihan</a>
+            <ul class="dd">
+                <li><a href="#">FE / BE </a>
+                <li><a class="sub-menu" href="#">By Frontend </a>
+                    <ul>
+                        <li><a class="sub-menu" href="#">HTML </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+                        <li><a class="sub-menu" href="#">CSS </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+                        <li><a class="sub-menu" href="#">Javascript dan JQuery </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+                        <li><a class="sub-menu" href="#">API dan AJAX </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                              </ul>
+                        </li>
+                        <li><a class="sub-menu" href="#">DATABASE SQL </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="sub-menu" href="#">By Backend</a>
+                    <ul>
+                        <li><a class="sub-menu" href="#">PHP </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+                        <li><a class="sub-menu" href="#">DATABASE SQL </a>
+                            <ul>
+                                <li><a href="#">Pengenalan</a></li>
+                                <li><a class="sub-menu" href="#">Toturial </a>
+                                    <ul>
+                                        <li><a href="#">Toturial [1]</a></li>
+                                        <li><a href="#">Toturial [2]</a></li>
+                                        <li><a href="#">Toturial [3]</a></li>
+                                        <li><a href="#">Toturial [4]</a></li>
+                                        <li><a href="#">Toturial [5]</a></li>
+                                        <li><a href="#">Toturial [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Contoh Tugas </a>
+                                    <ul>
+                                        <li><a href="#">Tugas [1]</a></li>
+                                        <li><a href="#">Tugas [2]</a></li>
+                                        <li><a href="#">Tugas [3]</a></li>
+                                        <li><a href="#">Tugas [4]</a></li>
+                                        <li><a href="#">Tugas [5]</a></li>
+                                        <li><a href="#">Tugas [6]</a></li>
+                                    </ul>
+                                <li><a class="sub-menu" href="#">Latihan - Latihan </a>
+                                    <ul>
+                                        <li><a href="#">Latihan [1]</a></li>
+                                        <li><a href="#">Latihan [2]</a></li>
+                                        <li><a href="#">Latihan [3]</a></li>
+                                        <li><a href="#">Latihan [4]</a></li>
+                                        <li><a href="#">Latihan [5]</a></li>
+                                        <li><a href="#">Latihan [6]</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+
+                        </li>
+                    </ul>
+                </li>
+                    <ul>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">Kontak Person</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+     
+    </ul>
+</div>
+</center>
+
+<script>
+$(document).ready(function(){
+           $("#menu li a").click(function() {
+                var hidden = $(this).parents("li").children("ul").is(":hidden");
+                
+                $("#menu>ul>li>ul").hide()        
+                $("#menu>ul>li>a").removeClass();
+                    
+                if (hidden) {
+                    $(this)
+                        .parents("li").children("ul").hover()
+                        .parents("li").children("a").addClass("zoneCur");
+                    } 
+               });
+        });
+</script>
+
+</body>
+</html>

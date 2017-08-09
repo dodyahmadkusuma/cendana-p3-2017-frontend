@@ -1,0 +1,163 @@
+<!-- <!-- <!-- dengan jQuery, buatlah filter form registrasi:
+- nama (required)
+- email (filter email format only)
+- password (min 6 char + alphanumeric + special character + uppercase)
+- password confirmation
+- phone number (filter number only & char +)
+- button submit (default: disabled)
+
+apabila syarat di atas tidak terpenuhi, maka:
+- button submit akan di disabled
+- button enabled tapi ada pesan error di tiap form yang tidak memenuhi syarat
+- GOAL: syarat di atas terpenuhi, button submit di klik akan muncul alert = FORM SUKSES DIKIRIM
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery-3.2.1.min.js"></script>
+	<style>
+		span{
+			color: red;
+			opacity: 0.5;
+		}
+		form{
+			text-align: center;
+		}
+		input{
+			padding: 5px;
+			margin: 3px;
+			border-radius: 9px 9px 9px 9px ;
+		}
+		button{
+			padding: 5px;
+		}
+		.merah{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<form id="myForm" action="http://google.com">
+
+		 <input name="nama" type="text" placeholder="Username">
+		 <br>
+		 <span id="nama"></span>
+		 <br>
+		 <input name="email" type="email" placeholder="Email@email.com">
+		 <br>
+		 <span id="email"></span>
+		 <br>
+		 <input name="pass" type="password" placeholder="Password">
+		 <br>
+		 <span id="pass"></span>
+		 <br>
+		 <input name="pass2" type="password" placeholder="Password Confirmation">
+		 <br>
+		 <span id="pass2"></span>
+		 <br>
+		 <input name="number" type="text" placeholder="Phone Number">
+		 <br>
+		 <span id="number"></span>
+		 <br>
+		 <button type="submit" disabled="">Submit</button>
+	 </form>
+
+	 <script>
+		 $("#myForm").submit(function(e){
+			 var nama = $("input[name='nama']").val();
+			 var email = $("input[name='email']").val();
+			 var pass = $("input[name='pass']").val();
+			 var pass2 = $("input[name='pass2']").val();
+			 var number = $("input[name='number']").val();
+			 var rege = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{0,6})$/;
+			 if(nama == "") {
+			 	$('#nama').html('Inputan Nama Tidak Boleh Kosong');
+			 	$("input[name='nama']").addClass('merah');
+			 	$('#nama').show();
+			 }else{
+			 	$("input[name='nama']").removeClass('merah');
+			 	$('#nama').hide();
+			 }
+
+			 if(email == "") {
+			 	$('#email').html('Inputan Email Tidak Boleh Kosong');
+			 	$("input[name='email']").addClass('merah');
+			 	$('#email').show();
+			 }else{
+			 	$("input[name='email']").removeClass('merah');
+			 	$('#email').hide();
+			 }
+
+			 if(pass == "") {
+			 	$('#pass').html('Inputan Password Tidak Boleh Kosong');
+			 	$("input[name='pass']").addClass('merah');
+			 	$('#pass').show();
+			 }else{
+			 	$("input[name='pass']").removeClass('merah');
+			 	$('#pass').hide();
+			 }
+
+			 if(pass.length <=5 ) {
+			 	$('#pass').html('Inputan Password Minimal 6 Character');
+			 	$("input[name='pass']").addClass('merah');
+			 	$('#pass').show();
+			 }else{
+			 	$("input[name='pass']").removeClass('merah');
+			 	$('#pass').hide();
+
+			 }
+			  if(pass2 == "") {
+			 	$('#pass2').html('Inputan Password Confirmation Tidak Boleh Kosong');
+			 	$("input[name='pass2']").addClass('merah');
+			 	$('#pass2').show();
+			 }else{
+			 	$("input[name='pass2']").removeClass('merah');
+			 	$('#pass2').hide();
+
+			 }
+			 	if (pass2!=pass) {
+			 	$('#pass2').html('Password Confirmation Tidak Sama Dengan Password');
+			 	$("input[name='pass2']").addClass('merah');
+			 	$('#pass2').show();
+			 	}
+
+			 if(number==""){
+			 	$('#number').html('Inputan Phone Number Tidak Boleh Kosong');
+			 	$("input[name='number']").addClass('merah');
+			 	$('#number').show();
+			 }else{
+			 	$("input[name='number']").removeClass('merah');
+			 	$('#number').hide();
+			 }
+
+			 if(number != $.isNumeric) {
+			 	$('#number').html('Inputan Phone Number Harus Nomer');
+			 	$("input[name='number']").addClass('merah');
+			 	$('#number').show();
+			 }else{
+			 	$("input[name='number']").removeClass('merah');
+			 	$('#number').hide();
+
+			 }
+
+			 if(nama!='' && email!='' && pass!='' && pass2!='' && number!='' && pass2 == pass){
+			 	alert('Inputan Anda Berhasil');
+			 	$("input").removeClass('merah');
+			 }else{
+			 	alert('Inputan Anda Kurang Lengkap');
+			 	$('button').attr('disabled','disabled');
+			 }
+			 e.preventDefault();
+		 });
+		  $("input").keyup(function(){
+ 			var str = $(this).val().length;
+ 			if (str>0) {
+			 	$('button').removeAttr('disabled','disabled');
+ 			}if (str==0) {
+			 	$('button').attr('disabled','disabled');
+ 			}
+		});
+	 </script>
+</body>
+</html> --> -->

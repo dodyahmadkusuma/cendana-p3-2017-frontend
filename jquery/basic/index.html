@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+
+		<div id="navbar">
+			<ul class="left">
+				<li><a href="#"></a></li>
+				<li><input type="" name=""><button></button></li>
+			</ul>
+			<ul class="right">
+				<li><a href="#"></a></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="article">
+				
+				<div class="judul"> <a href=""></a></div>
+				<div class="descripsi">
+					<div class="user" style=""><a href="#"></a></div>
+					<div class="tanggal" style=""></div>
+				</div>
+				<div class="image_content">
+					<img src="" alt="image_content">
+				</div>
+				<div class="isi_content">
+					
+					<br>
+					<button id="read-more"></button>
+				</div>
+			</div>
+	</div>
+
+	<div class="sidebar">
+			<div class="isi_sidebar_atas">
+				<div class="judul_sidebar_atas"></div>
+			
+					<div class="judul_content_sidebar_atas">
+					<a href=""></a>
+					</div>
+					<div class="content_sidebar">
+						<a href="">
+							<img src="" alt="image_content">
+						</a>
+				</div>
+			
+			</div>
+					<button id="sembunyi">Hide</button>
+					<button id="kembali">Show</button>
+			<div class="isi_sidebar_bawah">
+				<div class="judul_sidebar_bawah"></div>
+				<div class="img_profile">
+					<img src="" alt="profile">
+				</div>
+				<div class="content_profile">
+					
+				</div>
+				
+			</div>
+						<ul>
+							<li>Post 1</li>
+							<li>Post 2</li>
+							<li>Post 3</li>
+							<li>Post 4</li>
+							<li>Post 5</li>
+						</ul>
+		</div>
+					
+					</body>
+					</html>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('*').css('margin','0px');
+			$('*').css('padding','0px');
+			$('.left a').html('Kasus');
+			$('.left a').css('font-size','40px');
+			$('.left a').css('padding-left','20px');
+			$('.left a').css('padding-right','40px');
+			$('.left button').html('search');
+			$('#navbar').css('position','fixed');
+			$('#navbar').css('width','100%');
+			$('#navbar').css('padding-top','10px');
+			$('#navbar').css('background-color','lightsteelblue');
+			$('#navbar').css('border-radius','0px 0px 15px 15px');
+			$('#navbar').css('border-radius','0px 0px 15px 15px');
+			$('#navbar').css('height','80px');
+			$('#navbar').css('box-shadow','0px 0px 15px #3224f4');
+			$('#navbar ul li').css('display','inline');
+
+			
+			$('.judul').html('Judul Article');
+			$('.image_content img').attr('src','content.jpg');
+			$('.image_content img').css('width','25%');
+			$('.content').css('padding-top','100px');
+			$('.content').css('padding-left','12px');
+			$('.content').css('margin-top','50px');
+			$('.content').css('margin-top','50px');
+			$('.content').css('width','70%');
+			$('.content').css('float','left');
+			$('.isi_content').css('width','80%');
+		
+			$('.isi_content').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iusto veritatis at quae labore perspiciatis praesentium sint cupiditate eligendi, qui laborum, omnis, consequuntur dolore cum velit. Molestiae laborum similique, quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam praesentium assumenda ipsam explicabo perferendis veritatis quis rem corporis? Assumenda quis accusantium odit aspernatur quo inventore dolorem consequuntur, autem laboriosam maiores! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab recusandae tenetur fugiat. Quod saepe aut corporis sapiente libero nam omnis explicabo! Fugit enim mollitia obcaecati, cupiditate inventore veniam aperiam reprehenderit.');
+			
+			$('.sidebar').css('float','right');
+			$('.sidebar').css('padding-top','80px');
+			$('.judul_sidebar_atas').html('Baca Juga');
+			$('.judul_content_sidebar_atas').html('Lorem ipsum dolor');
+			$('.isi_sidebar_atas').css('padding','10px');
+			$('.content_profile').html('<table><tr><td>Nama</td><td>:</td><td>Dody Ahmad Kusuma Jaya</td></tr><tr><td>Alamat</td><td>:</td><td>Perum Pondok Mutiara Singosari Dengkol Malang</td></tr><tr><td>Email</td><td>:</td><td>dodyrepper@gmail.com</td></tr><tr><td>No.Telp</td><td>:</td><td>+6281283848923</td></tr></table>')
+			$('.img_profile img').attr('src','profile.jpg');
+			$('.judul_sidebar_bawah').html('Profile');
+		});
+
+		$('#sembunyi').click(function(){
+			$('.isi_sidebar_bawah').hide();
+		});
+		$('#kembali').click(function(){
+			$('.isi_sidebar_bawah').show();
+		});
+	</script>
+
+
+
+
+		</body></html>

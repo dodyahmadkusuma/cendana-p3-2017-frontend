@@ -1,0 +1,129 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+
+.wrapper{
+	margin: 0 auto;
+}
+
+.navbar{
+	position: fixed;
+	width: 100%;
+	padding-top: 10px;
+	background-color: lightsteelblue;
+	height: 55px;
+	border-radius: 0px 0px 15px 15px ;
+	box-shadow: 0px 0px 15px #3224f4;
+
+}
+.navbar a img{
+	display: inline;
+}
+.navbar ul.left li{
+	text-align: center;
+	display: inline-block;
+	float: left;
+	margin-left: 20px; 
+}
+.navbar ul.right li{
+	display: inline-block;
+	float: right;
+	padding-right: 10px;
+}
+.navbar ul.right li a{
+	text-decoration: none;
+	font-size: 35px;
+	color: orange;
+	text-shadow: 3px 3px 3px blue ;
+}
+.navbar ul.right li a:hover{
+	color: blue;
+	text-decoration: none;
+	font-size: 35px;
+	text-shadow: 3px 3px 3px orange ;
+}
+.menusidebar{
+	padding-top: 70px;
+	padding-left: 20px;
+	float: left;
+	width: 15%;
+	background-color: gray;
+	color: white
+}
+.menusidebar ul li{
+	padding-left: 30px;
+	padding-top: 20px;
+	list-style: none;
+	font-size: 20px;
+}
+.menusidebar ul li a{
+	text-decoration: none;
+	color: #eae5e5;
+
+}
+.menusidebar ul li a:hover{
+	text-decoration: none;
+	color: #f7f7f7;
+	text-shadow: 3px 3px 3px #f7f7f7 ;
+}
+
+.content{
+	padding-top: 70px;
+	width: 76.5%;
+	float: right;
+}
+
+
+.form_login{
+
+    display: inline;
+    text-align:center;
+    width: 100%;
+
+}
+button{
+	padding: 10px;
+	margin-right: 15px;
+	border-radius: 5px;
+	font-size: 12px;
+	color: salmon;
+	background: gray;
+	box-shadow: 3px 2px 1px black ;
+}
+button:active{
+	padding: 10px;
+	margin-right: 15px;
+	border-radius: 5px;
+	font-size: 12px;
+	color: salmon;
+	background: black;
+	box-shadow: 3px 2px 1px black ;
+}	
+.trans{
+	font-size: 19px;
+	font-weight: 2px;
+	width: 40%;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: width ease-in 1s;
+
+}
+.trans:hover{
+	font-size: 19px;
+	font-weight: 2px;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	width: 70%;
+
+}
+.form-login{
+	padding: 1150px;
+	background: black;
+}
+a{
+	text-decoration:none;
+}
