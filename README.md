@@ -1,4 +1,4 @@
- [![logo](blog-template/asset/logo.png)](list-article.html)
+ [![logo](blog-template/asset/logo.png)](blog-template/list-article.html)
 
 <table>
 
