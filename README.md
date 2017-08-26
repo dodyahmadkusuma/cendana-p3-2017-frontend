@@ -1,5 +1,9 @@
- [![logo](blog-template/asset/logo.png)](blog-template/list-article.html)
+#blog html murni
 
+ [![logo](blog-template/asset/logo.png)](blog-template/list-article.html)
+#blog-template
+
+[![logo](blog-template/asset/logo.png)](blog/index.php)
 <table>
 
 <tbody>
